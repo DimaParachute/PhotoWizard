@@ -17,6 +17,10 @@
 		CC52D6BA2A03F934005ACD2D /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC52D6B92A03F934005ACD2D /* Photo.swift */; };
 		CC52D6BC2A03F957005ACD2D /* PhotosContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC52D6BB2A03F957005ACD2D /* PhotosContainer.swift */; };
 		CC52D6BE2A040007005ACD2D /* APIErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC52D6BD2A040007005ACD2D /* APIErrors.swift */; };
+		CC52D6C02A0400BE005ACD2D /* PhotoMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC52D6BF2A0400BE005ACD2D /* PhotoMock.swift */; };
+		CC52D6C42A040150005ACD2D /* PhotosService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC52D6C32A040150005ACD2D /* PhotosService.swift */; };
+		CC52D6C62A04017D005ACD2D /* ApiPhotosService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC52D6C52A04017D005ACD2D /* ApiPhotosService.swift */; };
+		CC52D6C82A0401AC005ACD2D /* MockPhotosService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC52D6C72A0401AC005ACD2D /* MockPhotosService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +35,10 @@
 		CC52D6B92A03F934005ACD2D /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		CC52D6BB2A03F957005ACD2D /* PhotosContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosContainer.swift; sourceTree = "<group>"; };
 		CC52D6BD2A040007005ACD2D /* APIErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIErrors.swift; sourceTree = "<group>"; };
+		CC52D6BF2A0400BE005ACD2D /* PhotoMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoMock.swift; sourceTree = "<group>"; };
+		CC52D6C32A040150005ACD2D /* PhotosService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosService.swift; sourceTree = "<group>"; };
+		CC52D6C52A04017D005ACD2D /* ApiPhotosService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiPhotosService.swift; sourceTree = "<group>"; };
+		CC52D6C72A0401AC005ACD2D /* MockPhotosService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPhotosService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +71,7 @@
 		CC52D69E2A03BB9E005ACD2D /* PhotoWizard */ = {
 			isa = PBXGroup;
 			children = (
+				CC52D6C12A040121005ACD2D /* Services */,
 				CC52D6AF2A03F787005ACD2D /* Presentation */,
 				CC52D6AD2A03F767005ACD2D /* Core */,
 				CC52D69F2A03BB9E005ACD2D /* PhotoWizardApp.swift */,
@@ -128,9 +137,28 @@
 			isa = PBXGroup;
 			children = (
 				CC52D6B92A03F934005ACD2D /* Photo.swift */,
+				CC52D6BF2A0400BE005ACD2D /* PhotoMock.swift */,
 				CC52D6BB2A03F957005ACD2D /* PhotosContainer.swift */,
 			);
 			path = Photos;
+			sourceTree = "<group>";
+		};
+		CC52D6C12A040121005ACD2D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CC52D6C22A040138005ACD2D /* Articles */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CC52D6C22A040138005ACD2D /* Articles */ = {
+			isa = PBXGroup;
+			children = (
+				CC52D6C32A040150005ACD2D /* PhotosService.swift */,
+				CC52D6C52A04017D005ACD2D /* ApiPhotosService.swift */,
+				CC52D6C72A0401AC005ACD2D /* MockPhotosService.swift */,
+			);
+			path = Articles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,7 +231,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC52D6C62A04017D005ACD2D /* ApiPhotosService.swift in Sources */,
+				CC52D6C02A0400BE005ACD2D /* PhotoMock.swift in Sources */,
+				CC52D6C82A0401AC005ACD2D /* MockPhotosService.swift in Sources */,
 				CC52D6BA2A03F934005ACD2D /* Photo.swift in Sources */,
+				CC52D6C42A040150005ACD2D /* PhotosService.swift in Sources */,
 				CC52D6BE2A040007005ACD2D /* APIErrors.swift in Sources */,
 				CC52D6B42A03F7DA005ACD2D /* PhotosRequest.swift in Sources */,
 				CC52D6B62A03F8BB005ACD2D /* APIConstants.swift in Sources */,
