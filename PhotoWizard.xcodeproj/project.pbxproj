@@ -8,17 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		CC52D6A02A03BB9E005ACD2D /* PhotoWizardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC52D69F2A03BB9E005ACD2D /* PhotoWizardApp.swift */; };
-		CC52D6A22A03BB9E005ACD2D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC52D6A12A03BB9E005ACD2D /* ContentView.swift */; };
+		CC52D6A22A03BB9E005ACD2D /* PhotosListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC52D6A12A03BB9E005ACD2D /* PhotosListView.swift */; };
 		CC52D6A42A03BB9F005ACD2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC52D6A32A03BB9F005ACD2D /* Assets.xcassets */; };
 		CC52D6A72A03BB9F005ACD2D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC52D6A62A03BB9F005ACD2D /* Preview Assets.xcassets */; };
+		CC52D6B22A03F7BC005ACD2D /* NetworkingAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC52D6B12A03F7BC005ACD2D /* NetworkingAgent.swift */; };
+		CC52D6B42A03F7DA005ACD2D /* PhotosRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC52D6B32A03F7DA005ACD2D /* PhotosRequest.swift */; };
+		CC52D6B62A03F8BB005ACD2D /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC52D6B52A03F8BB005ACD2D /* APIConstants.swift */; };
+		CC52D6BA2A03F934005ACD2D /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC52D6B92A03F934005ACD2D /* Photo.swift */; };
+		CC52D6BC2A03F957005ACD2D /* PhotosContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC52D6BB2A03F957005ACD2D /* PhotosContainer.swift */; };
+		CC52D6BE2A040007005ACD2D /* APIErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC52D6BD2A040007005ACD2D /* APIErrors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CC52D69C2A03BB9E005ACD2D /* PhotoWizard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoWizard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC52D69F2A03BB9E005ACD2D /* PhotoWizardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoWizardApp.swift; sourceTree = "<group>"; };
-		CC52D6A12A03BB9E005ACD2D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CC52D6A12A03BB9E005ACD2D /* PhotosListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosListView.swift; sourceTree = "<group>"; };
 		CC52D6A32A03BB9F005ACD2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC52D6A62A03BB9F005ACD2D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CC52D6B12A03F7BC005ACD2D /* NetworkingAgent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingAgent.swift; sourceTree = "<group>"; };
+		CC52D6B32A03F7DA005ACD2D /* PhotosRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosRequest.swift; sourceTree = "<group>"; };
+		CC52D6B52A03F8BB005ACD2D /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		CC52D6B92A03F934005ACD2D /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		CC52D6BB2A03F957005ACD2D /* PhotosContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosContainer.swift; sourceTree = "<group>"; };
+		CC52D6BD2A040007005ACD2D /* APIErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIErrors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +63,9 @@
 		CC52D69E2A03BB9E005ACD2D /* PhotoWizard */ = {
 			isa = PBXGroup;
 			children = (
+				CC52D6AF2A03F787005ACD2D /* Presentation */,
+				CC52D6AD2A03F767005ACD2D /* Core */,
 				CC52D69F2A03BB9E005ACD2D /* PhotoWizardApp.swift */,
-				CC52D6A12A03BB9E005ACD2D /* ContentView.swift */,
 				CC52D6A32A03BB9F005ACD2D /* Assets.xcassets */,
 				CC52D6A52A03BB9F005ACD2D /* Preview Content */,
 			);
@@ -65,6 +78,59 @@
 				CC52D6A62A03BB9F005ACD2D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CC52D6AD2A03F767005ACD2D /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				CC52D6B72A03F914005ACD2D /* Model */,
+				CC52D6AE2A03F77B005ACD2D /* Network */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		CC52D6AE2A03F77B005ACD2D /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				CC52D6B12A03F7BC005ACD2D /* NetworkingAgent.swift */,
+				CC52D6B32A03F7DA005ACD2D /* PhotosRequest.swift */,
+				CC52D6BD2A040007005ACD2D /* APIErrors.swift */,
+				CC52D6B52A03F8BB005ACD2D /* APIConstants.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		CC52D6AF2A03F787005ACD2D /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				CC52D6B02A03F791005ACD2D /* PhotosList */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		CC52D6B02A03F791005ACD2D /* PhotosList */ = {
+			isa = PBXGroup;
+			children = (
+				CC52D6A12A03BB9E005ACD2D /* PhotosListView.swift */,
+			);
+			path = PhotosList;
+			sourceTree = "<group>";
+		};
+		CC52D6B72A03F914005ACD2D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CC52D6B82A03F91D005ACD2D /* Photos */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CC52D6B82A03F91D005ACD2D /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				CC52D6B92A03F934005ACD2D /* Photo.swift */,
+				CC52D6BB2A03F957005ACD2D /* PhotosContainer.swift */,
+			);
+			path = Photos;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +203,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC52D6A22A03BB9E005ACD2D /* ContentView.swift in Sources */,
+				CC52D6BA2A03F934005ACD2D /* Photo.swift in Sources */,
+				CC52D6BE2A040007005ACD2D /* APIErrors.swift in Sources */,
+				CC52D6B42A03F7DA005ACD2D /* PhotosRequest.swift in Sources */,
+				CC52D6B62A03F8BB005ACD2D /* APIConstants.swift in Sources */,
+				CC52D6BC2A03F957005ACD2D /* PhotosContainer.swift in Sources */,
+				CC52D6A22A03BB9E005ACD2D /* PhotosListView.swift in Sources */,
+				CC52D6B22A03F7BC005ACD2D /* NetworkingAgent.swift in Sources */,
 				CC52D6A02A03BB9E005ACD2D /* PhotoWizardApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,6 +347,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,6 +377,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

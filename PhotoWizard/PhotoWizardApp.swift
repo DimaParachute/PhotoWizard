@@ -11,7 +11,7 @@ import SwiftUI
 struct PhotoWizardApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            PhotosListView()
         }
     }
 }
