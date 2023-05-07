@@ -15,12 +15,16 @@
 		CC52D6B42A03F7DA005ACD2D /* PhotosRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC52D6B32A03F7DA005ACD2D /* PhotosRequest.swift */; };
 		CC52D6B62A03F8BB005ACD2D /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC52D6B52A03F8BB005ACD2D /* APIConstants.swift */; };
 		CC52D6BA2A03F934005ACD2D /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC52D6B92A03F934005ACD2D /* Photo.swift */; };
-		CC52D6BC2A03F957005ACD2D /* PhotosContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC52D6BB2A03F957005ACD2D /* PhotosContainer.swift */; };
 		CC52D6BE2A040007005ACD2D /* APIErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC52D6BD2A040007005ACD2D /* APIErrors.swift */; };
 		CC52D6C02A0400BE005ACD2D /* PhotoMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC52D6BF2A0400BE005ACD2D /* PhotoMock.swift */; };
 		CC52D6C42A040150005ACD2D /* PhotosService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC52D6C32A040150005ACD2D /* PhotosService.swift */; };
 		CC52D6C62A04017D005ACD2D /* ApiPhotosService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC52D6C52A04017D005ACD2D /* ApiPhotosService.swift */; };
 		CC52D6C82A0401AC005ACD2D /* MockPhotosService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC52D6C72A0401AC005ACD2D /* MockPhotosService.swift */; };
+		CC52D6CA2A0403FF005ACD2D /* PhotosListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC52D6C92A0403FF005ACD2D /* PhotosListViewModel.swift */; };
+		CC52D6CC2A0404A0005ACD2D /* PhotosListFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC52D6CB2A0404A0005ACD2D /* PhotosListFactory.swift */; };
+		CC52D6CE2A040711005ACD2D /* StateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC52D6CD2A040711005ACD2D /* StateMachine.swift */; };
+		CC52D6D12A069765005ACD2D /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = CC52D6D02A069765005ACD2D /* SDWebImageSwiftUI */; };
+		CC52D6D82A06A92C005ACD2D /* ImageViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC52D6D72A06A92C005ACD2D /* ImageViewer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,12 +37,15 @@
 		CC52D6B32A03F7DA005ACD2D /* PhotosRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosRequest.swift; sourceTree = "<group>"; };
 		CC52D6B52A03F8BB005ACD2D /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		CC52D6B92A03F934005ACD2D /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
-		CC52D6BB2A03F957005ACD2D /* PhotosContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosContainer.swift; sourceTree = "<group>"; };
 		CC52D6BD2A040007005ACD2D /* APIErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIErrors.swift; sourceTree = "<group>"; };
 		CC52D6BF2A0400BE005ACD2D /* PhotoMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoMock.swift; sourceTree = "<group>"; };
 		CC52D6C32A040150005ACD2D /* PhotosService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosService.swift; sourceTree = "<group>"; };
 		CC52D6C52A04017D005ACD2D /* ApiPhotosService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiPhotosService.swift; sourceTree = "<group>"; };
 		CC52D6C72A0401AC005ACD2D /* MockPhotosService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPhotosService.swift; sourceTree = "<group>"; };
+		CC52D6C92A0403FF005ACD2D /* PhotosListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosListViewModel.swift; sourceTree = "<group>"; };
+		CC52D6CB2A0404A0005ACD2D /* PhotosListFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosListFactory.swift; sourceTree = "<group>"; };
+		CC52D6CD2A040711005ACD2D /* StateMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateMachine.swift; sourceTree = "<group>"; };
+		CC52D6D72A06A92C005ACD2D /* ImageViewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC52D6D12A069765005ACD2D /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +120,7 @@
 		CC52D6AF2A03F787005ACD2D /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				CC52D6CD2A040711005ACD2D /* StateMachine.swift */,
 				CC52D6B02A03F791005ACD2D /* PhotosList */,
 			);
 			path = Presentation;
@@ -121,6 +130,9 @@
 			isa = PBXGroup;
 			children = (
 				CC52D6A12A03BB9E005ACD2D /* PhotosListView.swift */,
+				CC52D6C92A0403FF005ACD2D /* PhotosListViewModel.swift */,
+				CC52D6D72A06A92C005ACD2D /* ImageViewer.swift */,
+				CC52D6CB2A0404A0005ACD2D /* PhotosListFactory.swift */,
 			);
 			path = PhotosList;
 			sourceTree = "<group>";
@@ -138,7 +150,6 @@
 			children = (
 				CC52D6B92A03F934005ACD2D /* Photo.swift */,
 				CC52D6BF2A0400BE005ACD2D /* PhotoMock.swift */,
-				CC52D6BB2A03F957005ACD2D /* PhotosContainer.swift */,
 			);
 			path = Photos;
 			sourceTree = "<group>";
@@ -177,6 +188,9 @@
 			dependencies = (
 			);
 			name = PhotoWizard;
+			packageProductDependencies = (
+				CC52D6D02A069765005ACD2D /* SDWebImageSwiftUI */,
+			);
 			productName = PhotoWizard;
 			productReference = CC52D69C2A03BB9E005ACD2D /* PhotoWizard.app */;
 			productType = "com.apple.product-type.application";
@@ -205,6 +219,9 @@
 				Base,
 			);
 			mainGroup = CC52D6932A03BB9E005ACD2D;
+			packageReferences = (
+				CC52D6CF2A069765005ACD2D /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = CC52D69D2A03BB9E005ACD2D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -234,13 +251,16 @@
 				CC52D6C62A04017D005ACD2D /* ApiPhotosService.swift in Sources */,
 				CC52D6C02A0400BE005ACD2D /* PhotoMock.swift in Sources */,
 				CC52D6C82A0401AC005ACD2D /* MockPhotosService.swift in Sources */,
+				CC52D6D82A06A92C005ACD2D /* ImageViewer.swift in Sources */,
+				CC52D6CA2A0403FF005ACD2D /* PhotosListViewModel.swift in Sources */,
 				CC52D6BA2A03F934005ACD2D /* Photo.swift in Sources */,
 				CC52D6C42A040150005ACD2D /* PhotosService.swift in Sources */,
 				CC52D6BE2A040007005ACD2D /* APIErrors.swift in Sources */,
 				CC52D6B42A03F7DA005ACD2D /* PhotosRequest.swift in Sources */,
 				CC52D6B62A03F8BB005ACD2D /* APIConstants.swift in Sources */,
-				CC52D6BC2A03F957005ACD2D /* PhotosContainer.swift in Sources */,
+				CC52D6CE2A040711005ACD2D /* StateMachine.swift in Sources */,
 				CC52D6A22A03BB9E005ACD2D /* PhotosListView.swift in Sources */,
+				CC52D6CC2A0404A0005ACD2D /* PhotosListFactory.swift in Sources */,
 				CC52D6B22A03F7BC005ACD2D /* NetworkingAgent.swift in Sources */,
 				CC52D6A02A03BB9E005ACD2D /* PhotoWizardApp.swift in Sources */,
 			);
@@ -445,6 +465,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CC52D6CF2A069765005ACD2D /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CC52D6D02A069765005ACD2D /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CC52D6CF2A069765005ACD2D /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CC52D6942A03BB9E005ACD2D /* Project object */;
 }

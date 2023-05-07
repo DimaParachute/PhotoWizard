@@ -10,7 +10,7 @@ import Combine
 
 final class ApiPhotosService: PhotosService {
     
-    func fetchPhotos() -> AnyPublisher<PhotosContainer, Error> {
-        PhotosRequest.photos()
+    func fetchPhotos(page: Int) -> AnyPublisher<[Photo], Error> {
+        PhotosRequest.photos(page: page)
     }
 }

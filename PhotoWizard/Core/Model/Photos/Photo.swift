@@ -7,12 +7,12 @@
 
 import Foundation
 
-struct Photo: Decodable {
+struct Photo: Decodable, Hashable {
     
     let urls: Urls
 }
 
-struct Urls: Decodable {
+struct Urls: Decodable, Hashable {
     
     let regular: String
     let thumb: String

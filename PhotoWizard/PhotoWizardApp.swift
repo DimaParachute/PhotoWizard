@@ -9,9 +9,14 @@ import SwiftUI
 
 @main
 struct PhotoWizardApp: App {
+    
+    let articlesListFactory: PhotosListFactory = PhotosListFactoryImpl()
+    
     var body: some Scene {
         WindowGroup {
-            PhotosListView()
+            NavigationView {
+                articlesListFactory.createPhotosList()
+            }
         }
     }
 }

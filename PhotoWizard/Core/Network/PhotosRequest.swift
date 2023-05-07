@@ -16,14 +16,14 @@ enum PhotosRequest {
 
 extension PhotosRequest {
     
-    static func photos() -> AnyPublisher<PhotosContainer, Error> {
+    static func photos(page: Int) -> AnyPublisher<[Photo], Error> {
         var components = URLComponents()
         components.scheme = "https"
         components.host = base
         components.path = "/photos"
         components.queryItems = [
             URLQueryItem(name: "client_id", value: APIConstants.apiKey),
-            URLQueryItem(name: "page", value: "1")
+            URLQueryItem(name: "page", value: String(page))
         ]
         guard let url = components.url else {
             return Fail(error: APIErrors.urlError)

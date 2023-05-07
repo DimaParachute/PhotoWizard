@@ -9,5 +9,5 @@ import Combine
 
 protocol PhotosService: AnyObject {
     
-    func fetchPhotos() -> AnyPublisher<PhotosContainer, Error>
+    func fetchPhotos(page: Int) -> AnyPublisher<[Photo], Error>
 }

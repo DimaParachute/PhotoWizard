@@ -9,9 +9,9 @@ import Foundation
 import Combine
 
 final class MockPhotosService: PhotosService {
-    
-    func fetchPhotos() -> AnyPublisher<PhotosContainer, Error> {
-        Just(PhotosContainer(totalResults: 20, photos: Photo.mock))
+
+    func fetchPhotos(page: Int) -> AnyPublisher<[Photo], Error> {
+        Just(Photo.mock)
             .setFailureType(to: Error.self)
             .eraseToAnyPublisher()
     }
